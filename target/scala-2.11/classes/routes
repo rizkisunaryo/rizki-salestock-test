@@ -6,6 +6,7 @@
 GET     /                           controllers.Assets.at(path="/public", file="app/index.html")
 
 GET     /api/posts                  controllers.Posts.list
+GET     /api/post/:id               controllers.Posts.findOne(id: String)
 PATCH   /api/post/:id/like          controllers.Posts.like(id: String)
 PATCH   /api/post/:id               controllers.Posts.update(id: String)
 POST    /api/post                   controllers.Posts.add

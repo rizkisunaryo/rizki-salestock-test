@@ -29,6 +29,12 @@ class Posts @Inject() (val reactiveMongoApi: ReactiveMongoApi)
       .recover {case PrimaryUnavailableException => InternalServerError("Please install MongoDB")}
   }
 
+  def findOne(id:String) = Action.async {implicit request =>
+    postRepo.findByCriteria(BSONDocument(Id -> id))
+      .map(posts => Ok(Json.toJson(posts(0))))
+      .recover {case PrimaryUnavailableException => InternalServerError("Please install MongoDB")}
+  }
+
   def like(id: String) = Action.async(BodyParsers.parse.json) { implicit request =>
     val value = (request.body \ Favorite).as[Boolean]
     postRepo.update(BSONDocument(Id -> BSONObjectID(id)), BSONDocument("$set" -> BSONDocument(Favorite -> value)))
@@ -42,8 +48,9 @@ class Posts @Inject() (val reactiveMongoApi: ReactiveMongoApi)
   }
 
   def delete(id: String) = Action.async {
-    postRepo.remove(BSONDocument(Id -> BSONObjectID(id)))
-      .map(le => RedirectAfterPost(le, routes.Posts.list()))
+    postRepo.remove(BSONDocument(Id -> id))
+      .map(le => Ok(Json.obj("success" -> le.ok)))
+      .recover {case PrimaryUnavailableException => InternalServerError("Please install MongoDB")}
   }
 
   private def RedirectAfterPost(result: WriteResult, call: Call): Result =
@@ -67,6 +74,7 @@ class Posts @Inject() (val reactiveMongoApi: ReactiveMongoApi)
       Favorite -> false,
       Id -> id
     )).map(le => Ok(Json.obj("success" -> le.ok, "_id" -> id)))
+    .recover {case PrimaryUnavailableException => InternalServerError("Please install MongoDB")}
   }
 }
 

@@ -1,4 +1,4 @@
-[0m[[31merror[0m] [0m/home/rizki/scala/rizki-salestock-test/app/controllers/Posts.scala:56: not found: value Future[0m
-[0m[[31merror[0m] [0m      Future{Ok(Json.obj("success" -> "crot", "_id" -> id))}[0m
-[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0m/home/rizki/scala/rizki-salestock-test/app/controllers/Posts.scala:34: value reverse is not a member of play.api.libs.json.JsObject[0m
+[0m[[31merror[0m] [0m      .map(posts => Ok(Json.toJson(posts(0).reverse)))[0m
+[0m[[31merror[0m] [0m                                            ^[0m
 [0m[[31merror[0m] [0mone error found[0m

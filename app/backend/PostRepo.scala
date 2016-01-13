@@ -12,6 +12,8 @@ import scala.concurrent.{ExecutionContext, Future}
 trait PostRepo {
   def find()(implicit ec: ExecutionContext): Future[List[JsObject]]
 
+  def findByCriteria(selector: BSONDocument)(implicit ec: ExecutionContext): Future[List[JsObject]]
+
   def update(selector: BSONDocument, update: BSONDocument)(implicit ec: ExecutionContext): Future[WriteResult]
 
   def remove(document: BSONDocument)(implicit ec: ExecutionContext): Future[WriteResult]
@@ -28,6 +30,9 @@ class PostMongoRepo(reactiveMongoApi: ReactiveMongoApi) extends PostRepo {
 
   def find()(implicit ec: ExecutionContext): Future[List[JsObject]] =
     collection.find(Json.obj()).cursor[JsObject](ReadPreference.Primary).collect[List]()
+
+  def findByCriteria(selector: BSONDocument)(implicit ec: ExecutionContext): Future[List[JsObject]] = 
+    collection.find(selector).cursor[JsObject](ReadPreference.Primary).collect[List]()
 
   def update(selector: BSONDocument, update: BSONDocument)(implicit ec: ExecutionContext): Future[WriteResult] = collection.update(selector, update)
 

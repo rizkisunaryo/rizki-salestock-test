@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/rizki/scala/rizki-salestock-test/conf/routes
-// @DATE:Wed Jan 13 14:12:13 WIB 2016
+// @DATE:Wed Jan 13 18:00:36 WIB 2016
 
 package router
 
@@ -44,6 +44,7 @@ class Routes(
   def documentation = List(
     ("""GET""", this.prefix, """controllers.Assets.at(path:String = "/public", file:String = "app/index.html")"""),
     ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/posts""", """controllers.Posts.list"""),
+    ("""GET""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/post/$id<[^/]+>""", """controllers.Posts.findOne(id:String)"""),
     ("""PATCH""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/post/$id<[^/]+>/like""", """controllers.Posts.like(id:String)"""),
     ("""PATCH""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/post/$id<[^/]+>""", """controllers.Posts.update(id:String)"""),
     ("""POST""", this.prefix + (if(this.prefix.endsWith("/")) "" else "/") + """api/post""", """controllers.Posts.add"""),
@@ -91,10 +92,27 @@ class Routes(
   )
 
   // @LINE:9
-  private[this] lazy val controllers_Posts_like2_route = Route("PATCH",
+  private[this] lazy val controllers_Posts_findOne2_route = Route("GET",
+    PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/post/"), DynamicPart("id", """[^/]+""",true)))
+  )
+  private[this] lazy val controllers_Posts_findOne2_invoker = createInvoker(
+    Posts_1.findOne(fakeValue[String]),
+    HandlerDef(this.getClass.getClassLoader,
+      "router",
+      "controllers.Posts",
+      "findOne",
+      Seq(classOf[String]),
+      "GET",
+      """""",
+      this.prefix + """api/post/$id<[^/]+>"""
+    )
+  )
+
+  // @LINE:10
+  private[this] lazy val controllers_Posts_like3_route = Route("PATCH",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/post/"), DynamicPart("id", """[^/]+""",true), StaticPart("/like")))
   )
-  private[this] lazy val controllers_Posts_like2_invoker = createInvoker(
+  private[this] lazy val controllers_Posts_like3_invoker = createInvoker(
     Posts_1.like(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -107,11 +125,11 @@ class Routes(
     )
   )
 
-  // @LINE:10
-  private[this] lazy val controllers_Posts_update3_route = Route("PATCH",
+  // @LINE:11
+  private[this] lazy val controllers_Posts_update4_route = Route("PATCH",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/post/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Posts_update3_invoker = createInvoker(
+  private[this] lazy val controllers_Posts_update4_invoker = createInvoker(
     Posts_1.update(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -124,11 +142,11 @@ class Routes(
     )
   )
 
-  // @LINE:11
-  private[this] lazy val controllers_Posts_add4_route = Route("POST",
+  // @LINE:12
+  private[this] lazy val controllers_Posts_add5_route = Route("POST",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/post")))
   )
-  private[this] lazy val controllers_Posts_add4_invoker = createInvoker(
+  private[this] lazy val controllers_Posts_add5_invoker = createInvoker(
     Posts_1.add,
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -141,11 +159,11 @@ class Routes(
     )
   )
 
-  // @LINE:12
-  private[this] lazy val controllers_Posts_delete5_route = Route("DELETE",
+  // @LINE:13
+  private[this] lazy val controllers_Posts_delete6_route = Route("DELETE",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), StaticPart("api/post/"), DynamicPart("id", """[^/]+""",true)))
   )
-  private[this] lazy val controllers_Posts_delete5_invoker = createInvoker(
+  private[this] lazy val controllers_Posts_delete6_invoker = createInvoker(
     Posts_1.delete(fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -158,11 +176,11 @@ class Routes(
     )
   )
 
-  // @LINE:14
-  private[this] lazy val controllers_Assets_at6_route = Route("GET",
+  // @LINE:15
+  private[this] lazy val controllers_Assets_at7_route = Route("GET",
     PathPattern(List(StaticPart(this.prefix), StaticPart(this.defaultPrefix), DynamicPart("file", """.+""",false)))
   )
-  private[this] lazy val controllers_Assets_at6_invoker = createInvoker(
+  private[this] lazy val controllers_Assets_at7_invoker = createInvoker(
     Assets_0.at(fakeValue[String], fakeValue[String]),
     HandlerDef(this.getClass.getClassLoader,
       "router",
@@ -191,33 +209,39 @@ class Routes(
       }
   
     // @LINE:9
-    case controllers_Posts_like2_route(params) =>
+    case controllers_Posts_findOne2_route(params) =>
       call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_Posts_like2_invoker.call(Posts_1.like(id))
+        controllers_Posts_findOne2_invoker.call(Posts_1.findOne(id))
       }
   
     // @LINE:10
-    case controllers_Posts_update3_route(params) =>
+    case controllers_Posts_like3_route(params) =>
       call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_Posts_update3_invoker.call(Posts_1.update(id))
+        controllers_Posts_like3_invoker.call(Posts_1.like(id))
       }
   
     // @LINE:11
-    case controllers_Posts_add4_route(params) =>
-      call { 
-        controllers_Posts_add4_invoker.call(Posts_1.add)
+    case controllers_Posts_update4_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_Posts_update4_invoker.call(Posts_1.update(id))
       }
   
     // @LINE:12
-    case controllers_Posts_delete5_route(params) =>
-      call(params.fromPath[String]("id", None)) { (id) =>
-        controllers_Posts_delete5_invoker.call(Posts_1.delete(id))
+    case controllers_Posts_add5_route(params) =>
+      call { 
+        controllers_Posts_add5_invoker.call(Posts_1.add)
       }
   
-    // @LINE:14
-    case controllers_Assets_at6_route(params) =>
+    // @LINE:13
+    case controllers_Posts_delete6_route(params) =>
+      call(params.fromPath[String]("id", None)) { (id) =>
+        controllers_Posts_delete6_invoker.call(Posts_1.delete(id))
+      }
+  
+    // @LINE:15
+    case controllers_Assets_at7_route(params) =>
       call(Param[String]("path", Right("/public")), params.fromPath[String]("file", None)) { (path, file) =>
-        controllers_Assets_at6_invoker.call(Assets_0.at(path, file))
+        controllers_Assets_at7_invoker.call(Assets_0.at(path, file))
       }
   }
 }

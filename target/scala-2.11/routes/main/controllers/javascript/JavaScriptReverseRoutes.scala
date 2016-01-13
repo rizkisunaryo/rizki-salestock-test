@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/rizki/scala/rizki-salestock-test/conf/routes
-// @DATE:Wed Jan 13 14:12:13 WIB 2016
+// @DATE:Wed Jan 13 18:00:36 WIB 2016
 
 import play.api.routing.JavaScriptReverseRoute
 import play.api.mvc.{ QueryStringBindable, PathBindable, Call, JavascriptLiteral }
@@ -51,6 +51,16 @@ package controllers.javascript {
 
   
     // @LINE:9
+    def findOne: JavaScriptReverseRoute = JavaScriptReverseRoute(
+      "controllers.Posts.findOne",
+      """
+        function(id) {
+          return _wA({method:"GET", url:"""" + _prefix + { _defaultPrefix } + """" + "api/post/" + (""" + implicitly[PathBindable[String]].javascriptUnbind + """)("id", encodeURIComponent(id))})
+        }
+      """
+    )
+  
+    // @LINE:10
     def like: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Posts.like",
       """
@@ -60,7 +70,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:11
+    // @LINE:12
     def add: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Posts.add",
       """
@@ -80,7 +90,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:12
+    // @LINE:13
     def delete: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Posts.delete",
       """
@@ -90,7 +100,7 @@ package controllers.javascript {
       """
     )
   
-    // @LINE:10
+    // @LINE:11
     def update: JavaScriptReverseRoute = JavaScriptReverseRoute(
       "controllers.Posts.update",
       """
