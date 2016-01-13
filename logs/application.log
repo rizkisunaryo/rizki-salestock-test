@@ -1,33 +1,313 @@
-2016-01-13 17:44:44,630 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-5 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
-2016-01-13 17:44:48,001 [INFO] from application in ForkJoinPool-1-worker-1 - ReactiveMongoPlugin starting...
-2016-01-13 17:44:48,038 [INFO] from application in ForkJoinPool-1-worker-1 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
+2016-01-13 19:12:48,862 [INFO] from play.core.server.NettyServer in play-fork-run-akka.actor.default-dispatcher-4 - Listening for HTTP on /0:0:0:0:0:0:0:0:9000
+2016-01-13 19:12:56,562 [INFO] from application in ForkJoinPool-1-worker-1 - ReactiveMongoPlugin starting...
+2016-01-13 19:12:56,582 [INFO] from application in ForkJoinPool-1-worker-1 - ReactiveMongoPlugin successfully started with db 'crot'! Servers:
 		[localhost:27017]
-2016-01-13 17:44:48,049 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
-2016-01-13 17:44:48,121 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi starting...
-2016-01-13 17:44:48,176 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-2 - No mongo-async-driver configuration found
-2016-01-13 17:44:48,280 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
+2016-01-13 19:12:56,588 [INFO] from play.api.Play in ForkJoinPool-1-worker-1 - Application started (Dev)
+2016-01-13 19:12:56,668 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi starting...
+2016-01-13 19:12:56,700 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
+2016-01-13 19:12:56,782 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi successfully started with DB 'crot'! Servers:
 		[localhost:27017]
-2016-01-13 18:00:44,153 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin stops, closing connections...
-2016-01-13 18:00:44,155 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
-2016-01-13 18:00:44,267 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - (State: Closing) SPURIOUS ChannelConnected(1907458108) (ignored, channel closed)
-2016-01-13 18:00:44,277 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongo Connections stopped. [Success(Closed)]
-2016-01-13 18:00:44,296 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-5#1193532327] stopped.
-2016-01-13 18:00:44,319 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongoApi stopping...
-2016-01-13 18:00:44,357 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-2 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-2#350643341] stopped.
-2016-01-13 18:00:44,360 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi connections stopped. [Success(Closed)]
-2016-01-13 18:00:44,709 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin starting...
-2016-01-13 18:00:44,711 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:00:44,711 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2016-01-13 18:00:44,734 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi starting...
-2016-01-13 18:00:44,735 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
-2016-01-13 18:00:44,759 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:02:04,625 [ERROR] from application in New I/O worker #2 - 
+2016-01-13 19:12:57,349 [ERROR] from application in application-akka.actor.default-dispatcher-6 - 
 
-! @6omde53dc - Internal server error, for (GET) [/api/post/554629095] ->
+! @6omdnd2fo - Internal server error, for (GET) [/api/post/554629095] ->
  
-play.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation error[value \ is not a member of play.api.mvc.AnyContent]
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IndexOutOfBoundsException: 0]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:158) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:155) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOptimized$class.apply(LinearSeqOptimized.scala:65) ~[scala-library-2.11.7.jar:na]
+	at scala.collection.immutable.List.apply(List.scala:84) ~[scala-library-2.11.7.jar:na]
+	at controllers.Posts$$anonfun$findOne$1$$anonfun$apply$6.apply(Posts.scala:34) ~[classes/:2.4.3]
+	at controllers.Posts$$anonfun$findOne$1$$anonfun$apply$6.apply(Posts.scala:34) ~[classes/:2.4.3]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Success.map(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	... 13 common frames omitted
+2016-01-13 19:14:13,335 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 19:14:13,351 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-5 - No mongo-async-driver configuration found
+2016-01-13 19:14:13,631 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - (State: Closing) SPURIOUS ChannelConnected(-1578682558) (ignored, channel closed)
+2016-01-13 19:14:13,654 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 19:14:13,669 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-5#-374348635] stopped.
+2016-01-13 19:14:13,718 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongoApi stopping...
+2016-01-13 19:14:13,769 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-2#-808942004] stopped.
+2016-01-13 19:14:13,771 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 19:14:14,154 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin starting...
+2016-01-13 19:14:14,156 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
+		[localhost:27017]
+2016-01-13 19:14:14,159 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-01-13 19:14:14,177 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi starting...
+2016-01-13 19:14:14,180 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-2 - No mongo-async-driver configuration found
+2016-01-13 19:14:14,217 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
+		[localhost:27017]
+2016-01-13 19:14:14,275 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-6 - The entire node set is unreachable, is there a network problem?
+2016-01-13 19:14:29,020 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 19:14:29,020 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
+2016-01-13 19:14:29,133 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-11#-2130152411] stopped.
+2016-01-13 19:14:29,134 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 19:14:29,145 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongoApi stopping...
+2016-01-13 19:14:29,167 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-8#-1987878989] stopped.
+2016-01-13 19:14:29,167 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 19:14:29,387 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin starting...
+2016-01-13 19:14:29,389 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin successfully started with db 'crot'! Servers:
+		[localhost:27017]
+2016-01-13 19:14:29,390 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2016-01-13 19:14:29,403 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoApi starting...
+2016-01-13 19:14:29,408 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-4 - No mongo-async-driver configuration found
+2016-01-13 19:14:29,457 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoApi successfully started with DB 'crot'! Servers:
+		[localhost:27017]
+2016-01-13 19:14:29,977 [ERROR] from application in application-akka.actor.default-dispatcher-3 - 
+
+! @6omdni9gl - Internal server error, for (GET) [/api/post/554629095] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IndexOutOfBoundsException: 0]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:158) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:155) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOptimized$class.apply(LinearSeqOptimized.scala:65) ~[scala-library-2.11.7.jar:na]
+	at scala.collection.immutable.List.apply(List.scala:84) ~[scala-library-2.11.7.jar:na]
+	at controllers.Posts$$anonfun$findOne$1$$anonfun$apply$6.apply(Posts.scala:34) ~[classes/:2.4.3]
+	at controllers.Posts$$anonfun$findOne$1$$anonfun$apply$6.apply(Posts.scala:34) ~[classes/:2.4.3]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Success.map(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	... 13 common frames omitted
+2016-01-13 19:15:43,293 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 19:15:43,293 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-5 - No mongo-async-driver configuration found
+2016-01-13 19:15:43,356 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-17#1982842461] stopped.
+2016-01-13 19:15:43,356 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 19:15:43,363 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi stopping...
+2016-01-13 19:15:43,379 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-6 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-14#548456028] stopped.
+2016-01-13 19:15:43,379 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 19:15:43,575 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin starting...
+2016-01-13 19:15:43,586 [ERROR] from application in New I/O worker #1 - 
+
+! @6omdnmedm - Internal server error, for (GET) [/api/post/554629095] ->
+ 
+play.api.UnexpectedException: Unexpected exception[ReactiveMongoPluginException: An exception occurred while initializing the ReactiveMongoPlugin.]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:165) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:121) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at scala.Option.map(Option.scala:146) ~[scala-library-2.11.7.jar:na]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:121) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1.apply(DevServerStart.scala:119) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at scala.util.Success.flatMap(Try.scala:231) ~[scala-library-2.11.7.jar:na]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:119) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1.apply(DevServerStart.scala:111) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.liftedTree1$1(Future.scala:24) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Future$PromiseCompletingRunnable.run(Future.scala:24) ~[scala-library-2.11.7.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) ~[akka-actor_2.11.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) ~[akka-actor_2.11.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.7.jar:na]
+Caused by: play.modules.reactivemongo.ReactiveMongoPluginException: An exception occurred while initializing the ReactiveMongoPlugin.
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStart(ReactiveMongoPlugin.scala:49) ~[play2-reactivemongo_2.11-0.11.7.play24.jar:0.11.7.play24]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:92) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Play$$anonfun$start$1$$anonfun$apply$mcV$sp$1.apply(Play.scala:92) ~[play_2.11-2.4.3.jar:2.4.3]
+	at scala.collection.Iterator$class.foreach(Iterator.scala:742) ~[scala-library-2.11.7.jar:na]
+	at scala.collection.AbstractIterator.foreach(Iterator.scala:1194) ~[scala-library-2.11.7.jar:na]
+	at scala.collection.IterableLike$class.foreach(IterableLike.scala:72) ~[scala-library-2.11.7.jar:na]
+	at play.api.Plugins.foreach(Plugins.scala:57) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Play$$anonfun$start$1.apply$mcV$sp(Play.scala:92) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:87) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Play$$anonfun$start$1.apply(Play.scala:87) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.utils.Threads$.withContextClassLoader(Threads.scala:21) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Play$.start(Play.scala:87) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.DevServerStart$$anonfun$mainDev$1$$anon$1$$anonfun$get$1$$anonfun$apply$1$$anonfun$1.apply(DevServerStart.scala:156) ~[play-server_2.11-2.4.3.jar:2.4.3]
+	... 15 common frames omitted
+Caused by: play.api.Configuration$$anon$1: Configuration error[Invalid mongodb.uri 'mongodb://localhost:27017/posts,mongodb://localhost:27017/crot']
+	at play.api.Configuration$.configError(Configuration.scala:178) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.Configuration.globalError(Configuration.scala:846) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.modules.reactivemongo.DefaultReactiveMongoApi$.parseConf(ReactiveMongoApi.scala:227) ~[play2-reactivemongo_2.11-0.11.7.play24.jar:0.11.7.play24]
+	at play.modules.reactivemongo.ReactiveMongoPlugin.onStart(ReactiveMongoPlugin.scala:41) ~[play2-reactivemongo_2.11-0.11.7.play24.jar:0.11.7.play24]
+	... 27 common frames omitted
+Caused by: reactivemongo.api.MongoConnection$URIParsingException: Could not parse hosts and database from URI: 'localhost:27017/posts,localhost:27017/crot'
+2016-01-13 19:27:33,183 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 19:27:33,273 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoPlugin starting...
+2016-01-13 19:27:33,274 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoPlugin successfully started with db 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 19:27:33,284 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-2 - Application started (Dev)
+2016-01-13 19:27:33,436 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoApi starting...
+2016-01-13 19:27:33,439 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-5 - No mongo-async-driver configuration found
+2016-01-13 19:27:33,471 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoApi successfully started with DB 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 19:27:33,536 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-2 - The entire node set is unreachable, is there a network problem?
+2016-01-13 19:27:33,568 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-2 - The entire node set is unreachable, is there a network problem?
+2016-01-13 19:29:30,989 [ERROR] from application in application-akka.actor.default-dispatcher-7 - 
+
+! @6omdphgd3 - Internal server error, for (GET) [/api/chat/131086751] ->
+ 
+play.api.http.HttpErrorHandlerExceptions$$anon$1: Execution exception[[IndexOutOfBoundsException: 0]]
+	at play.api.http.HttpErrorHandlerExceptions$.throwableToUsefulException(HttpErrorHandler.scala:265) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.DefaultHttpErrorHandler.onServerError(HttpErrorHandler.scala:191) ~[play_2.11-2.4.3.jar:2.4.3]
+	at play.api.GlobalSettings$class.onError(GlobalSettings.scala:179) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.DefaultGlobal$.onError(GlobalSettings.scala:212) [play_2.11-2.4.3.jar:2.4.3]
+	at play.api.http.GlobalSettingsHttpErrorHandler.onServerError(HttpErrorHandler.scala:94) [play_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:158) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at play.core.server.netty.PlayDefaultUpstreamHandler$$anonfun$9$$anonfun$apply$1.applyOrElse(PlayDefaultUpstreamHandler.scala:155) [play-netty-server_2.11-2.4.3.jar:2.4.3]
+	at scala.runtime.AbstractPartialFunction.apply(AbstractPartialFunction.scala:36) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure$$anonfun$recover$1.apply(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Failure.recover(Try.scala:216) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at play.api.libs.iteratee.Execution$trampoline$.executeScheduled(Execution.scala:109) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at play.api.libs.iteratee.Execution$trampoline$.execute(Execution.scala:71) [play-iteratees_2.11-2.4.3.jar:2.4.3]
+	at scala.concurrent.impl.CallbackRunnable.executeWithValue(Promise.scala:40) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.tryComplete(Promise.scala:248) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Promise$class.complete(Promise.scala:55) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.Promise$DefaultPromise.complete(Promise.scala:153) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$recover$1.apply(Future.scala:324) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.impl.CallbackRunnable.run(Promise.scala:32) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$AbstractBatch.processBatch(BatchingExecutor.scala:55) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply$mcV$sp(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch$$anonfun$run$1.apply(BatchingExecutor.scala:91) [akka-actor_2.11.jar:na]
+	at scala.concurrent.BlockContext$.withBlockContext(BlockContext.scala:72) [scala-library-2.11.7.jar:na]
+	at akka.dispatch.BatchingExecutor$BlockableBatch.run(BatchingExecutor.scala:90) [akka-actor_2.11.jar:na]
+	at akka.dispatch.TaskInvocation.run(AbstractDispatcher.scala:40) [akka-actor_2.11.jar:na]
+	at akka.dispatch.ForkJoinExecutorConfigurator$AkkaForkJoinTask.exec(AbstractDispatcher.scala:397) [akka-actor_2.11.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1339) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) [scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) [scala-library-2.11.7.jar:na]
+Caused by: java.lang.IndexOutOfBoundsException: 0
+	at scala.collection.LinearSeqOptimized$class.apply(LinearSeqOptimized.scala:65) ~[scala-library-2.11.7.jar:na]
+	at scala.collection.immutable.List.apply(List.scala:84) ~[scala-library-2.11.7.jar:na]
+	at controllers.Chats$$anonfun$findOne$1$$anonfun$apply$6.apply(Chat.scala:34) ~[classes/:2.4.3]
+	at controllers.Chats$$anonfun$findOne$1$$anonfun$apply$6.apply(Chat.scala:34) ~[classes/:2.4.3]
+	at scala.util.Success$$anonfun$map$1.apply(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.util.Try$.apply(Try.scala:192) [scala-library-2.11.7.jar:na]
+	at scala.util.Success.map(Try.scala:237) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.Future$$anonfun$map$1.apply(Future.scala:235) ~[scala-library-2.11.7.jar:na]
+	... 13 common frames omitted
+2016-01-13 20:33:52,291 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 20:33:52,292 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
+2016-01-13 20:33:52,343 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - (State: Closing) SPURIOUS ChannelConnected(-1735817244) (ignored, channel closed)
+2016-01-13 20:33:52,345 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-23#-1623105125] stopped.
+2016-01-13 20:33:52,345 [INFO] from application in ForkJoinPool-3-worker-3 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 20:33:52,357 [INFO] from application in ForkJoinPool-3-worker-3 - ReactiveMongoApi stopping...
+2016-01-13 20:33:52,377 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-20#1346812405] stopped.
+2016-01-13 20:33:52,377 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 20:33:52,578 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin starting...
+2016-01-13 20:33:52,580 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin successfully started with db 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 20:33:52,581 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
+2016-01-13 20:33:52,610 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi starting...
+2016-01-13 20:33:52,611 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
+2016-01-13 20:33:52,647 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi successfully started with DB 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 20:33:52,707 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-6 - The entire node set is unreachable, is there a network problem?
+2016-01-13 20:33:52,717 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - The entire node set is unreachable, is there a network problem?
+2016-01-13 20:33:52,725 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - The entire node set is unreachable, is there a network problem?
+2016-01-13 23:25:42,495 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 23:25:42,498 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-5 - No mongo-async-driver configuration found
+2016-01-13 23:25:42,554 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-8 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-29#-658076310] stopped.
+2016-01-13 23:25:42,554 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 23:25:42,562 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi stopping...
+2016-01-13 23:25:42,568 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-26#-940650807] stopped.
+2016-01-13 23:25:42,568 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 23:25:42,694 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin starting...
+2016-01-13 23:25:42,696 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin successfully started with db 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 23:25:42,696 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-01-13 23:25:42,715 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoApi starting...
+2016-01-13 23:25:42,716 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-3 - No mongo-async-driver configuration found
+2016-01-13 23:25:42,738 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoApi successfully started with DB 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 23:29:03,353 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 23:29:03,354 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-5 - No mongo-async-driver configuration found
+2016-01-13 23:29:03,437 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 23:29:03,437 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-7 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-35#761057827] stopped.
+2016-01-13 23:29:03,451 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi stopping...
+2016-01-13 23:29:03,481 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 23:29:03,487 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-32#1412940410] stopped.
+2016-01-13 23:29:03,700 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin starting...
+2016-01-13 23:29:03,701 [INFO] from application in application-akka.actor.default-dispatcher-5 - ReactiveMongoPlugin successfully started with db 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 23:29:03,702 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-5 - Application started (Dev)
+2016-01-13 23:29:03,712 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi starting...
+2016-01-13 23:29:03,714 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
+2016-01-13 23:29:03,768 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi successfully started with DB 'chats'! Servers:
+		[localhost:27017]
+2016-01-13 23:33:44,824 [ERROR] from application in New I/O worker #5 - 
+
+! @6omf5j9i4 - Internal server error, for (GET) [/api/chat/1310867510] ->
+ 
+play.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation error[')' expected but '}' found.]
 	at play.forkrun.protocol.Serializers$playExceptionPickler$.unpickle(Serializers.scala:159) ~[na:na]
 	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileFailureUnpickler$macro$56$2$.unpickle(Serializers.scala:175) ~[na:na]
 	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler$macro$66$2$.unpickle(Serializers.scala:181) ~[na:na]
@@ -54,56 +334,51 @@ play.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation erro
 	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346) ~[scala-library-2.11.7.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.7.jar:na]
 	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.7.jar:na]
-2016-01-13 18:03:57,323 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin stops, closing connections...
-2016-01-13 18:03:57,325 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
-2016-01-13 18:03:57,387 [INFO] from application in ForkJoinPool-3-worker-3 - ReactiveMongo Connections stopped. [Success(Closed)]
-2016-01-13 18:03:57,387 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-11#-762082937] stopped.
-2016-01-13 18:03:57,402 [INFO] from application in ForkJoinPool-3-worker-3 - ReactiveMongoApi stopping...
-2016-01-13 18:03:57,415 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-8#-1282550257] stopped.
-2016-01-13 18:03:57,416 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi connections stopped. [Success(Closed)]
-2016-01-13 18:03:57,627 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin starting...
-2016-01-13 18:03:57,629 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
+2016-01-13 23:34:01,550 [ERROR] from application in New I/O worker #5 - 
+
+! @6omf5k8d2 - Internal server error, for (GET) [/api/chat/1623667076] ->
+ 
+play.forkrun.protocol.Serializers$playExceptionPickler$$anon$1: Compilation error[')' expected but '}' found.]
+	at play.forkrun.protocol.Serializers$playExceptionPickler$.unpickle(Serializers.scala:159) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileFailureUnpickler$macro$56$2$.unpickle(Serializers.scala:175) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler$macro$66$2$.unpickle(Serializers.scala:181) ~[na:na]
+	at scala.pickling.Unpickler$class.unpickleEntry(Pickler.scala:79) ~[na:na]
+	at play.forkrun.protocol.Serializers$PlayRunsupportReloaderCompileResultUnpickler$macro$66$2$.unpickleEntry(Serializers.scala:181) ~[na:na]
+	at scala.pickling.functions$.unpickle(functions.scala:11) ~[na:na]
+	at sbt.serialization.JsonValue$$anonfun$parse$1.apply(SerializedValue.scala:104) ~[na:na]
+	at scala.util.Try$.apply(Try.scala:191) ~[scala-library-2.11.7.jar:na]
+	at sbt.serialization.JsonValue.parse(SerializedValue.scala:104) ~[na:na]
+	at sbt.protocol.BuildValue.value(Values.scala:11) ~[na:na]
+	at sbt.protocol.TaskSuccess.resultWithCustomThrowable(Values.scala:65) ~[na:na]
+	at sbt.protocol.TaskResult$class.result(Values.scala:56) ~[na:na]
+	at sbt.protocol.TaskSuccess.result(Values.scala:62) ~[na:na]
+	at play.forkrun.ForkRun$$anonfun$reloading$1.applyOrElse(ForkRun.scala:197) ~[na:na]
+	at akka.actor.Actor$class.aroundReceive(Actor.scala:465) ~[akka-actor_2.11.jar:na]
+	at play.forkrun.ForkRun.aroundReceive(ForkRun.scala:152) ~[na:na]
+	at akka.actor.ActorCell.receiveMessage(ActorCell.scala:516) ~[akka-actor_2.11.jar:na]
+	at akka.actor.ActorCell.invoke(ActorCell.scala:487) ~[akka-actor_2.11.jar:na]
+	at akka.dispatch.Mailbox.processMailbox(Mailbox.scala:254) ~[akka-actor_2.11.jar:na]
+	at akka.dispatch.Mailbox.run(Mailbox.scala:221) ~[akka-actor_2.11.jar:na]
+	at akka.dispatch.Mailbox.exec(Mailbox.scala:231) ~[akka-actor_2.11.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinTask.doExec(ForkJoinTask.java:260) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.pollAndExecAll(ForkJoinPool.java:1253) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool$WorkQueue.runTask(ForkJoinPool.java:1346) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinPool.runWorker(ForkJoinPool.java:1979) ~[scala-library-2.11.7.jar:na]
+	at scala.concurrent.forkjoin.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:107) ~[scala-library-2.11.7.jar:na]
+2016-01-13 23:35:25,594 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin stops, closing connections...
+2016-01-13 23:35:25,595 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-4 - No mongo-async-driver configuration found
+2016-01-13 23:35:25,639 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-2 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-41#232698600] stopped.
+2016-01-13 23:35:25,640 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongo Connections stopped. [Success(Closed)]
+2016-01-13 23:35:25,649 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi stopping...
+2016-01-13 23:35:25,657 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-38#-110123801] stopped.
+2016-01-13 23:35:25,658 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
+2016-01-13 23:35:25,858 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin starting...
+2016-01-13 23:35:25,860 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin successfully started with db 'chats'! Servers:
 		[localhost:27017]
-2016-01-13 18:03:57,632 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-6 - Application started (Dev)
-2016-01-13 18:03:57,650 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi starting...
-2016-01-13 18:03:57,651 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-2 - No mongo-async-driver configuration found
-2016-01-13 18:03:57,690 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
+2016-01-13 23:35:25,862 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
+2016-01-13 23:35:25,874 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoApi starting...
+2016-01-13 23:35:25,882 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-3 - No mongo-async-driver configuration found
+2016-01-13 23:35:25,913 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoApi successfully started with DB 'chats'! Servers:
 		[localhost:27017]
-2016-01-13 18:03:57,731 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - The entire node set is unreachable, is there a network problem?
-2016-01-13 18:03:57,749 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-6 - The entire node set is unreachable, is there a network problem?
-2016-01-13 18:09:44,368 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin stops, closing connections...
-2016-01-13 18:09:44,369 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-4 - No mongo-async-driver configuration found
-2016-01-13 18:09:44,417 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-17#104830010] stopped.
-2016-01-13 18:09:44,418 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongo Connections stopped. [Success(Closed)]
-2016-01-13 18:09:44,431 [INFO] from application in ForkJoinPool-3-worker-1 - ReactiveMongoApi stopping...
-2016-01-13 18:09:44,449 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-14#-1750882578] stopped.
-2016-01-13 18:09:44,462 [INFO] from application in ForkJoinPool-3-worker-3 - ReactiveMongoApi connections stopped. [Success(Closed)]
-2016-01-13 18:09:44,677 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin starting...
-2016-01-13 18:09:44,678 [INFO] from application in application-akka.actor.default-dispatcher-4 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:09:44,678 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-4 - Application started (Dev)
-2016-01-13 18:09:44,695 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi starting...
-2016-01-13 18:09:44,700 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-2 - No mongo-async-driver configuration found
-2016-01-13 18:09:44,725 [INFO] from application in application-akka.actor.default-dispatcher-2 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:09:44,761 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-2 - The entire node set is unreachable, is there a network problem?
-2016-01-13 18:09:44,763 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - The entire node set is unreachable, is there a network problem?
-2016-01-13 18:09:44,778 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-6 - The entire node set is unreachable, is there a network problem?
-2016-01-13 18:18:59,865 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoPlugin stops, closing connections...
-2016-01-13 18:18:59,867 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-3 - No mongo-async-driver configuration found
-2016-01-13 18:18:59,955 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-4 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-23#185398237] stopped.
-2016-01-13 18:18:59,956 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongo Connections stopped. [Success(Closed)]
-2016-01-13 18:18:59,966 [INFO] from application in ForkJoinPool-3-worker-7 - ReactiveMongoApi stopping...
-2016-01-13 18:18:59,982 [WARN] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - MongoDBSystem Actor[akka://reactivemongo/user/Connection-20#-1282586329] stopped.
-2016-01-13 18:18:59,987 [INFO] from application in ForkJoinPool-3-worker-5 - ReactiveMongoApi connections stopped. [Success(Closed)]
-2016-01-13 18:19:00,273 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoPlugin starting...
-2016-01-13 18:19:00,275 [INFO] from application in application-akka.actor.default-dispatcher-3 - ReactiveMongoPlugin successfully started with db 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:19:00,287 [INFO] from play.api.Play in application-akka.actor.default-dispatcher-3 - Application started (Dev)
-2016-01-13 18:19:00,301 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi starting...
-2016-01-13 18:19:00,302 [WARN] from reactivemongo.api.MongoDriver in application-akka.actor.default-dispatcher-6 - No mongo-async-driver configuration found
-2016-01-13 18:19:00,333 [INFO] from application in application-akka.actor.default-dispatcher-6 - ReactiveMongoApi successfully started with DB 'posts'! Servers:
-		[localhost:27017]
-2016-01-13 18:19:00,390 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-3 - The entire node set is unreachable, is there a network problem?
-2016-01-13 19:01:44,074 [INFO] from application in play-fork-run-akka.actor.default-dispatcher-79 - ReactiveMongoPlugin stops, closing connections...
-2016-01-13 19:01:44,076 [WARN] from reactivemongo.api.MongoDriver in play-fork-run-akka.actor.default-dispatcher-79 - No mongo-async-driver configuration found
+2016-01-13 23:35:25,940 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-7 - The entire node set is unreachable, is there a network problem?
+2016-01-13 23:35:25,947 [ERROR] from reactivemongo.core.actors.MongoDBSystem in reactivemongo-akka.actor.default-dispatcher-5 - The entire node set is unreachable, is there a network problem?

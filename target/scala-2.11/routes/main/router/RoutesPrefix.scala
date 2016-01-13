@@ -1,7 +1,7 @@
 
 // @GENERATOR:play-routes-compiler
 // @SOURCE:/home/rizki/scala/rizki-salestock-test/conf/routes
-// @DATE:Wed Jan 13 18:00:36 WIB 2016
+// @DATE:Wed Jan 13 23:31:35 WIB 2016
 
 
 package router {
