@@ -1,0 +1,4 @@
+[0m[[31merror[0m] [0m/home/rizki/scala/rizki-salestock-test/app/controllers/Posts.scala:56: not found: value Future[0m
+[0m[[31merror[0m] [0m      Future{Ok(Json.obj("success" -> "crot", "_id" -> id))}[0m
+[0m[[31merror[0m] [0m      ^[0m
+[0m[[31merror[0m] [0mone error found[0m
